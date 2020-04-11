@@ -6,12 +6,12 @@ import { baseUrl } from '../shared/baseUrl';
 function RenderCard({item, isLoading, errMess}) {
     if (isLoading) {
         return (
-        <Loading />
+            <Loading />
         );
     }
     if (errMess) {
         return (
-        <h4>{errMess}</h4>
+            <h4>{errMess}</h4>
         );
     }
     return (
@@ -31,9 +31,9 @@ function Home(props) {
             <div className="row">
                 <div className="col-md m-1">
                     <RenderCard 
-                        item={props.campsite} 
-                        isLoading={props.campsitesLoading}
-                        errMess={props.campsitesErrMess}
+                        item={props.promotion}
+                        isLoading={props.promotionLoading}
+                        errMess={props.promotionErrMess}
                     />
                 </div>
                 <div className="col-md m-1">
