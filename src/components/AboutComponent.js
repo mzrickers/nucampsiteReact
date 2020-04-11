@@ -73,14 +73,16 @@ function About(props) {
             <div className="row row-content">
                 <div className="col-12">
                     <h3>Community Partners</h3>
-                    <div className="col-12">
-                        <PartnersList partners={props.partners} />
-                    </div>
                 </div>
+                <PartnersList partners={props.partners} />
             </div>
         </div>
     );
 }
+
+
+
+
 
 
 function PartnersList(props) {
@@ -116,12 +118,12 @@ function PartnersList(props) {
         );
     }
     return (
-        <div className="col mt-4">
-            <Stagger in>
-                <Media tag="li">
+        <div className="col mt-4">  
+            <Media list>
+                <Stagger in>
                     {partners}
-                </Media>
-            </Stagger>
+                </Stagger>
+            </Media>    
         </div>
     )
 }
